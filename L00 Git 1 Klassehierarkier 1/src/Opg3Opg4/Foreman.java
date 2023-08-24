@@ -11,17 +11,6 @@ public class Foreman extends Mechanic {
         this.weeklyAddedMoney = weeklyAddedMoney;
     }
 
-
-        public int getWeeklyAddedMoney () {
-            return this.weeklyAddedMoney;
-        }
-
-        @Override
-        public int getHourlyWage () {
-            return super.getHourlyWage();
-        }
-
-
     public int getPromotionYear() {
         return promotionYear;
     }
