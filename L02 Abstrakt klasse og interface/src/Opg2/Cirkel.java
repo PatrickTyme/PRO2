@@ -2,8 +2,9 @@ package Opg2;
 
 public class Cirkel extends Figurer {
     private double radius;
-    public Cirkel(String name, int x, int y) {
+    public Cirkel(String name, int x, int y, double radius) {
         super(name, x, y);
+        this.radius = radius;
     }
 
     @Override

@@ -5,8 +5,10 @@ public class Ellipse extends Figurer {
     private int storakse;
     private int lilleakse;
 
-    public Ellipse(String name, int x, int y) {
+    public Ellipse(String name, int x, int y, int storakse, int lilleakse) {
         super(name, x, y);
+        this.storakse = storakse;
+        this.lilleakse = lilleakse;
     }
 
     @Override
