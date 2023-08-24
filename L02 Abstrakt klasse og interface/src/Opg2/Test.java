@@ -12,7 +12,6 @@ public class Test {
             System.out.println("Arealet er: " + figur.area());
         }
 
-        /** Parallelforskyd alle figurerne med samme afstand og udskriv figurerne igen */
         for (Figurer figur : figurer) {
             figur.parallelforskyd(10, 10);
             System.out.println(figur);
