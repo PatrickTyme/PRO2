@@ -16,4 +16,6 @@ public class Kvadrat extends Figurer {
     public String toString() {
         return super.toString() + " sidelængde=" + sidelængde;
     }
+
+
 }
