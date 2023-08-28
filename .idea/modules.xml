@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/L00 Git 1 Klassehierarkier 1/L00 Git 1 Klassehierarkier 1.iml" filepath="$PROJECT_DIR$/L00 Git 1 Klassehierarkier 1/L00 Git 1 Klassehierarkier 1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/L02 Abstrakt klasse og interface/L02 Abstrakt klasse og interface.iml" filepath="$PROJECT_DIR$/L02 Abstrakt klasse og interface/L02 Abstrakt klasse og interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L03 Interface/L03 Interface.iml" filepath="$PROJECT_DIR$/L03 Interface/L03 Interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/PRO2.iml" filepath="$PROJECT_DIR$/PRO2.iml" />
     </modules>
   </component>
