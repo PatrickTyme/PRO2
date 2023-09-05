@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/L03 Interface/L03 Interface.iml" filepath="$PROJECT_DIR$/L03 Interface/L03 Interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/L05 Recursion/L05 Recursion.iml" filepath="$PROJECT_DIR$/L05 Recursion/L05 Recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L06 Recursion2/L06 Recursion2.iml" filepath="$PROJECT_DIR$/L06 Recursion2/L06 Recursion2.iml" />
       <module fileurl="file://$PROJECT_DIR$/PRO2.iml" filepath="$PROJECT_DIR$/PRO2.iml" />
     </modules>
   </component>
