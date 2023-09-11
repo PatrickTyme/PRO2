@@ -6,6 +6,7 @@ public class opg1 {
         printBinomial(7);
     }
 
+    /** Pre N < M */
     public static int binomial(int n, int m) {
         if (m == 0 || m == n) {
             return 1;

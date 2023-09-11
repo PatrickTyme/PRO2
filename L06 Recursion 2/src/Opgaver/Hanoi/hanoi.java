@@ -5,6 +5,8 @@ public class hanoi {
         move(4, 1, 3); // 4 diske fra 1 (=A) til 3 (=C)
         }
         // move n disks from ‘from’ to ‘to’
+    // f(n) = antal flyt
+    // f(n) = 2^n - 1
         public static void move(int n, int from, int to) {
             if (n == 1) {
                 System.out.println("Move: " + from + " -> " + to);
