@@ -49,16 +49,17 @@ public class Ex1 {
         System.out.println();
 
     }
+
     /* Opg1 e: Program a findAll() method. Its signature and implementation must fit the use of the method:
-    * List<Person> list1 = findAll(persons, p -> p.getAge() < 30); */
-        public static List<Person> findAll(List<Person> list, Predicate<Person> filter) {
-            ArrayList<Person> list1 = new ArrayList<>();
-            for (Person p : list) {
-                if (filter.test(p))
-                    list1.add(p);
-            }
-            return list1;
+     * List<Person> list1 = findAll(persons, p -> p.getAge() < 30); */
+    public static List<Person> findAll(List<Person> list, Predicate<Person> filter) {
+        ArrayList<Person> list1 = new ArrayList<>();
+        for (Person p : list) {
+            if (filter.test(p))
+                list1.add(p);
         }
+        return list1;
+    }
 
 
     /**

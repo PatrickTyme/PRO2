@@ -37,8 +37,6 @@ public class Ex2 {
         System.out.println(runners);
 
 
-
-
 //        System.out.println(runners);
 //        System.out.println();
 

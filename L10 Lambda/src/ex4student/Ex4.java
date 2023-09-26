@@ -21,7 +21,7 @@ public class Ex4 {
         System.out.println();
         // OBS: Throws exception.
         /** Opg 4 b: Erstat den fejlende for-sætning med en løkke, som anvender en iterator til at fjerne løbere
-        med lapTime >= 40. Udskriv listen med løberne */
+         med lapTime >= 40. Udskriv listen med løberne */
         Iterator<Runner> i1 = runners.iterator();
 
         while (i1.hasNext()) {
@@ -32,16 +32,39 @@ public class Ex4 {
         System.out.println(runners);
         System.out.println();
 
-        /** Lav en metode, som fjerner løbere fra en liste af løbere vha. et lambda udtryk. Metoden
-        skal implementeres vha. en iterator.
-        Metodens hovede*/
 
-        /**
-        * Removes runners that satisfies the given filter.
-                * Returns true, if any runner is removed.
-        */
-        public static boolean removeIf(List<Runner> runners, Predicate<Runner> Filter) {
+        // opg d)
+        removeIf(runners, runner -> runner.getLapTime() >= 40);
+        System.out.println(runners);
+        System.out.println();
 
+        //opg e)
+        runners.removeIf(runner -> runner.getLapTime() >= 40);
+        System.out.println(runners);
+        System.out.println();
+
+    }
+
+    /**
+     * opg c)
+     * Lav en metode, som fjerner løbere fra en liste af løbere vha. et lambda udtryk. Metoden
+     * skal implementeres vha. en iterator.
+     * Metodens hovede
+     *         /**
+     *          * Removes runners that satisfies the given filter.
+     *          * Returns true, if any runner is removed.
+     *          */
+
+    public static boolean removeIf(List<Runner> runners, Predicate<Runner> filter) {
+        boolean removed = false;
+        Iterator<Runner> it = runners.iterator();
+        while (it.hasNext()) {
+            Runner runner = it.next();
+            if (filter.test(runner)) {
+                it.remove();
+                removed = true;
+            }
         }
+        return removed;
     }
 }
