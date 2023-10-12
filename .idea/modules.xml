@@ -10,7 +10,10 @@
       <module fileurl="file://$PROJECT_DIR$/L08 Generics/L08 Generics.iml" filepath="$PROJECT_DIR$/L08 Generics/L08 Generics.iml" />
       <module fileurl="file://$PROJECT_DIR$/L09 Java Collections Framework/L09 Java Collections Framework.iml" filepath="$PROJECT_DIR$/L09 Java Collections Framework/L09 Java Collections Framework.iml" />
       <module fileurl="file://$PROJECT_DIR$/L10 Lambda/L10 Lambda.iml" filepath="$PROJECT_DIR$/L10 Lambda/L10 Lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L12 Observer Pattern/L12 Observer Pattern.iml" filepath="$PROJECT_DIR$/L12 Observer Pattern/L12 Observer Pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L13 JUnitTest/L13 JUnitTest.iml" filepath="$PROJECT_DIR$/L13 JUnitTest/L13 JUnitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/PRO2.iml" filepath="$PROJECT_DIR$/PRO2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SU Test/SU Test.iml" filepath="$PROJECT_DIR$/SU Test/SU Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strategy patterns/Strategy patterns.iml" filepath="$PROJECT_DIR$/Strategy patterns/Strategy patterns.iml" />
     </modules>
   </component>
