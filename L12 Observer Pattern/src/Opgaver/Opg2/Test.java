@@ -15,11 +15,15 @@ public class Test {
         ob.add("Oel");
         ob.remove("Oel");
 
+//        for (String s : bag) {
+//            System.out.printf("%-6s, antal, %3dn\, ", s, bag.getCount(s) + );
+//        }
 
         for (int i = 0; i < ob.items.size(); i++) {
             ob.add("Oel");
             System.out.println();
         }
+
 
         Iterator<String> IterKey = ob.items.keySet().iterator();
 

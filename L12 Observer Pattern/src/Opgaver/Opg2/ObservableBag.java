@@ -2,9 +2,10 @@ package Opgaver.Opg2;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
-public class ObservableBag implements Bag{
+public class ObservableBag implements Bag, Iterable<String> {
 
     HashMap<String, Integer> items = new HashMap<>();
     List<Observer> observers = new ArrayList<>();
@@ -47,5 +48,10 @@ public class ObservableBag implements Bag{
     @Override
     public String toString() {
         return items + "";
+    }
+
+    @Override
+    public Iterator<String> iterator() {
+        return null;
     }
 }
