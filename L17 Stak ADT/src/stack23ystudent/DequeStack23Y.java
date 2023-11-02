@@ -15,7 +15,8 @@ public class DequeStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public void push(E entry) {
-
+        deque.addFirst(entry);
+        //deque.push(entry);
     }
 
     /**
@@ -24,8 +25,7 @@ public class DequeStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public E pop() {
-
-        return null;
+        return deque.removeFirst();
     }
 
     /**
@@ -34,8 +34,7 @@ public class DequeStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public E peek() {
-
-        return null;
+        return deque.peekFirst();
     }
 
     /**
@@ -43,8 +42,7 @@ public class DequeStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public boolean isEmpty() {
-
-        return false;
+        return deque.isEmpty();
     }
 
     /**
@@ -52,7 +50,7 @@ public class DequeStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public void clear() {
-
+        deque.clear();
     }
 
     /**
@@ -60,7 +58,6 @@ public class DequeStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public int size() {
-
-        return 0;
+        return deque.size();
     }
 }

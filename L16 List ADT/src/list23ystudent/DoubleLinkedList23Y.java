@@ -33,6 +33,9 @@ public class DoubleLinkedList23Y<E> implements List23Y<E> {
      */
     @Override
     public boolean remove(E e) {
+        if (header.next != trailer) {
+
+        }
         return false;
     }
 
@@ -41,6 +44,12 @@ public class DoubleLinkedList23Y<E> implements List23Y<E> {
      */
     @Override
     public boolean contains(E e) {
+        Node<E> node = header.next;
+        while (node != null) {
+            if (node.element.equals(e)) {
+                return true;
+            }
+        }
         return false;
     }
 

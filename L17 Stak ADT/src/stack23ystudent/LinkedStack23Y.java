@@ -1,5 +1,8 @@
 package stack23ystudent;
 
+import java.util.Arrays;
+import java.util.NoSuchElementException;
+
 // OPGAVE 1 med single-linked liste.
 public class LinkedStack23Y<E> implements Stack23Y<E> {
     // top of stack is at head of list
@@ -12,7 +15,16 @@ public class LinkedStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public void push(E entry) {
+        if (head == null) {
+            head = new Node<>(entry);
+            size++;
+            return;
+        }
 
+        Node<E> node = head;
+        head = new Node<>(entry);
+        head.next = node;
+        size++;
     }
 
     /**
@@ -21,8 +33,11 @@ public class LinkedStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public E pop() {
-
-        return null;
+        if (size == 0) throw new NoSuchElementException();
+        Node<E> removeNode = head;
+        head = removeNode.next;
+        size--;
+        return removeNode.element;
     }
 
     /**
@@ -31,8 +46,12 @@ public class LinkedStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public E peek() {
-
-        return null;
+        if (size == 0) throw new NoSuchElementException();
+        Node<E> node = head;
+        while (node.next != null) {
+            node = node.next;
+        }
+        return node.element;
     }
 
     /**
@@ -40,8 +59,7 @@ public class LinkedStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public boolean isEmpty() {
-
-        return false;
+        return size == 0;
     }
 
     /**
@@ -49,7 +67,8 @@ public class LinkedStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public void clear() {
-        // TODO
+        head = null;
+        size = 0;
     }
 
     /**
@@ -58,7 +77,7 @@ public class LinkedStack23Y<E> implements Stack23Y<E> {
     @Override
     public int size() {
 
-        return 0;
+        return size;
     }
 
     //-------------------------------------------------------------------------

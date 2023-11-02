@@ -3,8 +3,8 @@ package stack23ystudent;
 public class Ex1App {
 
     public static void main(String[] args) {
-        Stack23Y<String> stack = new ArrayStack23Y<>();
-//        Stack23Y<String> stack = new LinkedStack23Y<>();
+//        Stack23Y<String> stack = new ArrayStack23Y<>();
+       Stack23Y<String> stack = new LinkedStack23Y<>();
 //        Stack23Y<String> stack = new DequeStack23Y<>();
 
         stack.push("Tom");
@@ -36,9 +36,9 @@ public class Ex1App {
 
     /** Reverse the table. */
     public static <E> void reverse(E[] table) {
-        // Stack23Y<E> stack = new ArrayStack23Y<E>();
-        // Stack23Y<E> stack = new LinkedStack23Y<E>();
-        Stack23Y<E> stack = new DequeStack23Y<>();
+         //Stack23Y<E> stack = new ArrayStack23Y<E>();
+        Stack23Y<E> stack = new LinkedStack23Y<E>();
+        // Stack23Y<E> stack = new DequeStack23Y<>();
         for (E e : table) {
             stack.push(e);
         }
