@@ -2,6 +2,7 @@ package list23ystudent;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /** An array based implementation of the List ADT. */
 public class ArrayList23Y<E> implements List23Y<E> {
@@ -171,7 +172,10 @@ public class ArrayList23Y<E> implements List23Y<E> {
 
         @Override
         public E next() {
-            return data[index++];
+            if (!hasNext()) throw new NoSuchElementException();
+            E e = data[index];
+            index++;
+            return e;
         }
 
     }
@@ -188,4 +192,6 @@ public class ArrayList23Y<E> implements List23Y<E> {
             }
         return result.toString() + "]";
     }
+
+
 }
