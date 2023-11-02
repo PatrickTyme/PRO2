@@ -1,6 +1,7 @@
 package list23ystudent;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /** A single-linked nodes based implementation of the List ADT. */
 public class SingleLinkedList23Y<E> implements List23Y<E> {
@@ -45,7 +46,7 @@ public class SingleLinkedList23Y<E> implements List23Y<E> {
             if (node.next.element.equals(e)) {
                 node.next = node.next.next;
                 size--;
-                    return true;
+                return true;
             }
             node = node.next;
         }
@@ -64,12 +65,14 @@ public class SingleLinkedList23Y<E> implements List23Y<E> {
      */
     @Override
     public boolean contains(E e) {
-        while (!head.element.equals(e)) {
-            head = head.next;
-            if (head.next.equals(e))
-            return true;
+        Node<E> node = head;
+        while (node != null) {
+            if (node.element.equals(e)) {
+                return true;
+            }
+            node = node.next;
         }
-        return true;
+        return false;
     }
 
     /**
@@ -102,7 +105,14 @@ public class SingleLinkedList23Y<E> implements List23Y<E> {
      */
     @Override
     public E get(int index) {
-        return null;
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        Node<E> node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node.element;
     }
 
     /**
@@ -112,7 +122,23 @@ public class SingleLinkedList23Y<E> implements List23Y<E> {
      */
     @Override
     public void add(int index, E e) {
+        if (index < 0 || index > size) throw new IndexOutOfBoundsException();
 
+        if (index == 0) {
+            Node<E> node = new Node<>(e);
+            node.next = head;
+            head = node;
+            size++;
+        } else {
+            Node<E> node = head;
+            for (int i = 0; i < index - 1; i++) {
+                node = node.next;
+            }
+            Node<E> newNode = new Node<>(e);
+            newNode.next = node.next;
+            node.next = newNode;
+            size++;
+        }
     }
 
     /**
@@ -121,7 +147,23 @@ public class SingleLinkedList23Y<E> implements List23Y<E> {
      */
     @Override
     public E remove(int index) {
-        return null;
+        if (index < 0 || index >= size) throw new IndexOutOfBoundsException();
+
+        if (index == 0) {
+            E e = head.element;
+            head = head.next;
+            size--;
+            return e;
+        } else {
+            Node<E> node = head;
+            for (int i = 0; i < index - 1; i++) {
+                node = node.next;
+            }
+            E e = node.next.element;
+            node.next = node.next.next;
+            size--;
+            return e;
+        }
     }
 
     /**
@@ -130,6 +172,15 @@ public class SingleLinkedList23Y<E> implements List23Y<E> {
      */
     @Override
     public int indexOf(E e) {
+        Node<E> node = head;
+        int index = 0;
+        while (node != null) {
+            if (node.element.equals(e)) {
+                return index;
+            }
+            node = node.next;
+            index++;
+        }
         return -1;
     }
 
@@ -140,7 +191,23 @@ public class SingleLinkedList23Y<E> implements List23Y<E> {
      */
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new Iterator<>() {
+            private Node<E> node = head;
+
+            @Override
+            public boolean hasNext() {
+                return node != null;
+            }
+
+            @Override
+            public E next() {
+                if (!this.hasNext()) throw new NoSuchElementException();
+
+                E e = node.element;
+                node = node.next;
+                return e;
+            }
+        };
     }
 
     //-------------------------------------------
@@ -159,6 +226,16 @@ public class SingleLinkedList23Y<E> implements List23Y<E> {
 
     @Override
     public String toString() {
-        return null;
+        StringBuilder sb = new StringBuilder("[");
+        Node<E> node = head;
+        while (node != null) {
+            sb.append(node.element);
+            if (node.next != null) {
+                sb.append(", ");
+            }
+            node = node.next;
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }
