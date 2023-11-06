@@ -34,7 +34,7 @@ public class DequeStack23Y<E> implements Stack23Y<E> {
      */
     @Override
     public E peek() {
-        return deque.peekFirst();
+        return deque.getFirst();
     }
 
     /**
