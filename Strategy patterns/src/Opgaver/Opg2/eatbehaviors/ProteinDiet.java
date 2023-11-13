@@ -1,4 +1,4 @@
-package Opgaver.opg2.eatbehaviors;
+package Opgaver.Opg2.eatbehaviors;
 
 public class ProteinDiet implements EatBehavior {
     @Override

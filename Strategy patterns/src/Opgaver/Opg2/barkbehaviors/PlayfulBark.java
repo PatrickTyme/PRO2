@@ -1,4 +1,4 @@
-package Opgaver.opg2.barkbehaviors;
+package Opgaver.Opg2.barkbehaviors;
 
 public class PlayfulBark implements BarkBehavior {
     @Override

@@ -1,7 +1,7 @@
-package Opgaver.opg2.dogs;
+package Opgaver.Opg2.dogs;
 
-import Opgaver.opg2.barkbehaviors.BarkBehavior;
-import Opgaver.opg2.eatbehaviors.EatBehavior;
+import Opgaver.Opg2.barkbehaviors.BarkBehavior;
+import Opgaver.Opg2.eatbehaviors.EatBehavior;
 
 public abstract class Dog {
     private BarkBehavior barkBehavior;

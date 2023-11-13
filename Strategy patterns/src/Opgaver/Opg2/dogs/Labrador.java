@@ -1,4 +1,4 @@
-package Opgaver.opg2.dogs;
+package Opgaver.Opg2.dogs;
 
 public class Labrador extends Dog {
     public Labrador() {
